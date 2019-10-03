@@ -2,9 +2,184 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Таблицы</title>
+    <!--    Задание 3 (таблицы)
+    1. Повторите таблицу по данному по образцу
+    2. Создайте таблицу с заголовком, каждая вторая строка которой серого цвета
+    3. Создайте таблицу с фиксированной первой колонкой. Пример:-->
+    <style>
+        table {
+            width: 20%;
+            background: none;
+            color: black;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, th{
+            background: none;
+            padding: 5px;
+            border: black 1px solid;
+        }
+        .even tr:nth-child(even){
+            background: gray;
+        }
+        .fix{
+            table-layout: fixed;
+            width: 50%;
+            border: none;
+        }
+        .fixedvis{
+            width: 20%;
+            padding: 0;
+        }
+        .fixedvis table {
+            width: 100%;
+            border: none;
+            border-width: 0 0 1px;
+        }
+        .fixedvis td, .fixedvis th{
+            border-width: 0 0 1px;
+        }
+        .fix .fixrow>td{
+            padding: 0;
+        }
+        .scroll{
+            overflow: scroll;
+        }
+        .scroll table {
+            table-layout: fixed;
+            border: 0;
+        }
+        .scroll th{
+            width: 150px;
+        }
+        .scroll td, .scroll th {
+            border-width: 0 1px 1px 0;
+        }
+        .bg th{
+            background: aquamarine;
+        }
+    </style>
 </head>
 <body>
+<table>
+    <tr>
+        <th rowspan="2">номер</th>
+        <th colspan="2">теги</th>
+    </tr>
+    <tr>
+        <th>тег</th>
+        <th>значение</th>
+    </tr>
+    <tr>
+        <th>1</th>
+        <th>p</th>
+        <th rowspan="4">для текста</th>
+    </tr>
+    <tr>
+        <th>2</th>
+        <th>a</th>
+    </tr>
+    <tr>
+        <th>3</th>
+        <th>b</th>
+    </tr>
+    <tr>
+        <th>4</th>
+        <th>i</th>
+    </tr>
+    <tr>
+        <th>5</th>
+        <th>table</th>
+        <th>таблица</th>
+    </tr>
+    <tr>
+        <th>6</th>
+        <th>tr</th>
+        <th>ряд таблицы</th>
+    </tr>
+    <tr>
+        <th>7</th>
+        <th>td</th>
+        <th rowspan="2">ячейки таблицы</th>
+    </tr>
+    <tr>
+        <th>8</th>
+        <th>th</th>
+    </tr>
+</table>
+<h1>Заголовок</h1>
+<table class="even">
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+</table>
+<p></p>
+<table class="fix bg">
+    <tr class="fixrow">
+        <td class="fixedvis">
+            <table>
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>DMC</td>
+                </tr>
+                <tr>
+                    <td>IT</td>
+                </tr>
+                <tr>
+                    <td>BML</td>
+                </tr>
+                <tr>
+                    <td>MT</td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <div class="scroll"> <table>
+                <tr>
+                    <th>Pozition</th>
+                    <th>Height</th>
+                    <th>Born</th>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>6'1"</td>
+                    <td>08-13-1990</td>
+                </tr>
+                <tr>
+                    <td>PG</td>
+                    <td>5'9"</td>
+                    <td>02-07-1989</td>
+                </tr>
+                <tr>
+                    <td>SG</td>
+                    <td>6'5"</td>
+                    <td>02-11-1993</td>
+                </tr>
+                <tr>
+                    <td>SG</td>
+                    <td>6'4</td>
+                    <td>05-05-1987</td>
+                </tr>
+            </table></div>
 
+        </td>
+    </tr>
+</table>
 </body>
 </html>
