@@ -2,9 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Тень+псевдоэлементы</title>
+    <!--    Задание 4 (работа с тенью + псевдоэлементы)
+    Добавить на документ любое изображение 160х160
+     Добавить небольшой выступ (рельеф) в нижней части изображения, используя
+    свойство box-shadow.
+     Сделать эффект врезанного в плоскость изображения. Картинка должна стать круглой с
+    помощью css, используя свойство box-shadow.
+     Сделать эффект скотча в верхней части изображения, используя псевдоэлемент :after
+     Сделать эффект размытых границ изображения, используя псевдоэлемент :after.
+    Картинка должна стать круглой с помощью css.-->
+    <style>
+        .img-1 {
+            width: 160px;
+            height: 160px;
+            border-radius: 20px;
+            box-shadow: inset 0 -10px 0 0 rgba(0, 0, 0, 0.7);
+            background: url("../3fd7959adc3030e087-79404908.jpg") no-repeat 0 0;
+            background-size: 160px 160px;
+            display: inline-block;
+        }
+
+        .img-2 {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            box-shadow: inset -1px 3px 5px 2px rgba(60, 60, 60, .8);
+            background: url("../3fd7959adc3030e087-79404908.jpg") no-repeat 0 0;
+            background-size: 160px 160px;
+            display: inline-block;
+        }
+
+        .gray-bg {
+            background: rgba(60, 60, 60, 1);
+            padding: 10px;
+            display: inline-block;
+
+        }
+
+        .img-3 {
+            width: 160px;
+            height: 160px;
+            background: url("../3fd7959adc3030e087-79404908.jpg") no-repeat 0 0;
+            background-size: 160px 160px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .img-3:after {
+            position: absolute;
+            left: 40px;
+            top: -10px;
+            height: 20px;
+            width: 80px;
+            border: solid 1px rgba(212, 212, 0, 0.9);
+            background: rgba(212, 212, 0, 0.8);
+            content: '';
+        }
+
+        .img-4 {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            position: relative;
+            background: url("../3fd7959adc3030e087-79404908.jpg") no-repeat 0 0;
+            background-size: 160px 160px;
+            display: inline-block;
+            z-index: 2;
+        }
+        .img-4:after{
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 15px 15px #fff;
+            z-index: 5;
+            content: '';
+        }
+
+    </style>
 </head>
 <body>
+<span class="img-1"></span>
+
+<span class="gray-bg">
+    <span class="img-2"></span>
+</span>
+
+<span class="img-3"></span>
+
+<span class="img-4"></span>
 
 </body>
 </html>
