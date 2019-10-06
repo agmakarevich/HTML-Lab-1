@@ -2,9 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Центрирование</title>
+    <!--    Задание 8
+    Необходимо отцентрировать внутренний блок относительно внешнего. Размеры блоков
+    заданы в относительных величинах. Решить задачу максимально возможным количеством
+    способов.-->
+    <style>
+        .v1block{
+            border: solid 5px black;
+            width: 40em;
+            height: 20em;
+        }
+        .v1block2{
+            width: 10em;
+            height: 10em;
+            background: darkcyan;
+            border: solid 5px black;
+            margin: 5em 15em;
+        }
+        .v2block{
+            border: solid 5px black;
+            width: 40em;
+            height: 20em;
+            position: relative;
+        }
+        .v2block2{
+            width: 50%;
+            height: 50%;
+            background: darkcyan;
+            border: solid 5px black;
+            position: absolute;
+            left: 25%;
+            top: 25%;
+        }
+        .v3block {
+            border: solid 5px black;
+            width: 40em;
+            height: 20em;
+            display: flex;
+        }
+        .v3block2 {
+            width: 50%;
+            height: 50%;
+            background: darkcyan;
+            border: solid 5px black;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
-
+<div class="v1block">
+    <div class="v1block2">
+    </div>
+</div>
+<div class="v2block">
+    <div class="v2block2">
+    </div>
+</div>
+<div class="v3block">
+    <div class="v3block2">
+    </div>
+</div>
 </body>
 </html>
