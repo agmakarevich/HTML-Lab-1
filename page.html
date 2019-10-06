@@ -2,9 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Responsive layout</title>
+    <!-- Задание 6 (responsive layout)
+    Создайте свой маленький комикс (картинка и текст не имеет значение). Все блоки комикса
+    должны быть одного размера. Каждый блок комикса состоит из картинки и текстового блока,
+    наложенного поверх картинки. Решение в двух видах должно быть размещено на одной
+    странице:
+     Элементы выстраиваются в 3 колонки, размер элементов неизменен, растягиваются
+    отступы.
+     Шаблон должен перестраиваться в зависимости от ширины экрана. В каждой строке
+    столько элементов сколько позволяет ширина экрана.-->
 </head>
+<style>
+    .komiks{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .razdelitel{
+        width: 100%;
+    }
+    .block{
+        border: 10px solid beige;
+        background: #d3ffe6;
+        position: relative;
+        width: 250px;
+        text-align: center;
+    }
+    .komiks2 .block{
+        float: left;
+    }
+    .text{
+        position: absolute;
+        background: white;
+        max-width: 150px;
+        left: 0px;
+        bottom: 0px;
+        padding: 4px 8px;
+    }
+</style>
 <body>
-
+<div class="komiks">
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Knock, knock.</div>
+    </div>
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Who’s there?</div>
+    </div>
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Hatch.</div>
+    </div>
+    <div class="razdelitel">
+    </div>
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Hatch, who?</div>
+    </div>
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Cover your mouth when you sneeze!</div>
+    </div>
+    <div class="block">
+        <img src="..//komiks.png" alt="">
+        <div class="text">...</div>
+    </div>
+</div>
+<div class="komiks2">
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Knock, knock.</div>
+    </div>
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Who’s there?</div>
+    </div>
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Hatch.</div>
+    </div>
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Hatch, who?</div>
+    </div>
+    <div class="block">
+        <img src="../komiks.png" alt="">
+        <div class="text">Cover your mouth when you sneeze!</div>
+    </div>
+    <div class="block">
+        <img src="..//komiks.png" alt="">
+        <div class="text">...</div>
+    </div>
+</div>
 </body>
 </html>
